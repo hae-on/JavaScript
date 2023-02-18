@@ -17,4 +17,4 @@ let text = '두개의' + '문자들';
 console.log(text);
 
 text = '1' + 1;
-console.log(text); //1
+console.log(text); //11
