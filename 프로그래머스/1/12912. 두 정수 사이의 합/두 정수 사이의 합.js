@@ -1,9 +1,8 @@
 function solution(a, b) {
     let answer = 0;
-    let minNum = Math.min(a, b);
-    let maxNum = Math.max(a, b);
-    
-    for(let i=minNum; i<=maxNum; i++){
+    const max = Math.max(a, b);
+    const min = Math.min(a, b);
+    for(let i=min; i<=max; i++){
         answer += i;
     }
     return answer;
