@@ -1,6 +1,7 @@
 function solution(n) {
     let answer = [];
     
-    String(n).split('').map((el) => answer.push(parseInt(el)))
+    answer.push(...String(n));
+    answer = answer.map(Number);
     return answer.reverse();
 }
