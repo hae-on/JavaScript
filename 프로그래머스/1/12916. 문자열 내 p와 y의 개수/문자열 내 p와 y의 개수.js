@@ -1,16 +1,17 @@
 function solution(s){
     let answer = true;
-    
     s = s.toLowerCase();
-    let pCount = 0;
-    let yCount = 0;
+    let pCnt = 0;
+    let yCnt = 0;
     
-    s.split('').map((el) => {
-        if(el === 'p') pCount += 1;
-        if(el === 'y') yCount += 1;
+    [...s].forEach((el) => {
+        if(el === 'p') pCnt++;
+        else if (el === 'y') yCnt++;
     })
-
-    if(pCount !== yCount) answer = false;
+    
+    console.log(pCnt, yCnt)
+    
+    if(pCnt !== yCnt) answer = false;
     
     return answer;
 }
