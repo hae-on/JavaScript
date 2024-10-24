@@ -1,24 +1,12 @@
 function solution(s){
-    var answer = true;
-    let right = 0;
-    let left = 0;
-    
-    if(s[s.length-1] === '(') return false;
+    let stack = [];
     
     for(let i=0; i<s.length; i++){
-      if(s[i] === "("){
-          left++;
-      }  
-        if(s[i] === ")"){
-            right++;
-        }
-       
-        if(right>left){
-            return false;
-        }
+        if(s[0] === ')') return false;
+        else if(s[i] === '(') stack.push(s[i]);
+        else if(s[i] === ')' && stack.length > 0) stack.pop();
     }
-        if(left !== right){
-            return false;
-        }
-            return true;
-        }
+    
+    return stack.length === 0;
+    console.log(stack)
+}
